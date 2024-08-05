@@ -1,2 +1,2 @@
 # MadMax00
-Test de site statique pour une formation
+Test 2 de site statique pour une formation
