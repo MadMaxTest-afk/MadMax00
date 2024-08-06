@@ -121,6 +121,41 @@
         font-size: 1.5rem;
       }
     }
+
+    /* Styles pour la carte mentale */
+    .mindmap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem 0;
+    }
+
+    .mindmap-node {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      margin: 0.5rem;
+      text-align: center;
+    }
+
+    .mindmap-children {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .mindmap-branch {
+      display: flex;
+      align-items: center;
+    }
+
+    .mindmap-line {
+      width: 2rem;
+      height: 2px;
+      background-color: var(--secondary-color);
+      margin: 0 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -129,6 +164,56 @@
 <p class="author">Maximilien Petit (CHCSC)</p>
 <p class="date">2024-06-16</p>
 </header>
+
+<!-- Ajout de la carte mentale -->
+<div class="mindmap">
+  <div class="mindmap-node">Omeka S</div>
+  <div class="mindmap-children">
+    <div class="mindmap-branch">
+      <div class="mindmap-line"></div>
+      <div class="mindmap-node">Installation</div>
+    </div>
+    <div class="mindmap-branch">
+      <div class="mindmap-line"></div>
+      <div class="mindmap-node">Fonctionnalités</div>
+      <div class="mindmap-children">
+        <div class="mindmap-branch">
+          <div class="mindmap-line"></div>
+          <div class="mindmap-node">Contenus</div>
+        </div>
+        <div class="mindmap-branch">
+          <div class="mindmap-line"></div>
+          <div class="mindmap-node">Médias</div>
+        </div>
+        <div class="mindmap-branch">
+          <div class="mindmap-line"></div>
+          <div class="mindmap-node">Collections</div>
+        </div>
+        <div class="mindmap-branch">
+          <div class="mindmap-line"></div>
+          <div class="mindmap-node">Vocabulaires</div>
+        </div>
+        <div class="mindmap-branch">
+          <div class="mindmap-line"></div>
+          <div class="mindmap-node">Modèles de ressource</div>
+        </div>
+      </div>
+    </div>
+    <div class="mindmap-branch">
+      <div class="mindmap-line"></div>
+      <div class="mindmap-node">Modules</div>
+    </div>
+    <div class="mindmap-branch">
+      <div class="mindmap-line"></div>
+      <div class="mindmap-node">Tâches</div>
+    </div>
+    <div class="mindmap-branch">
+      <div class="mindmap-line"></div>
+      <div class="mindmap-node">Paramètres et fichiers</div>
+    </div>
+  </div>
+</div>
+
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#installation" id="toc-installation"><span
