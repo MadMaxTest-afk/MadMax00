@@ -8,166 +8,119 @@
   <meta name="dcterms.date" content="2024-06-16" />
   <title>Formation Doctorale Omeka S</title>
   <style>
+    :root {
+      --primary-color: #3498db;
+      --secondary-color: #2c3e50;
+      --text-color: #333;
+      --background-color: #f5f5f5;
+    }
+
     html {
-      color: #1a1a1a;
-      background-color: #fdfdfd;
+      font-size: 16px;
+      line-height: 1.6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-color);
+      background-color: var(--background-color);
     }
+
     body {
+      max-width: 800px;
       margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
+      padding: 2rem;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 12px;
-      }
-      h1 {
-        font-size: 1.8em;
-      }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--secondary-color);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
     }
-    @media print {
-      html {
-        background-color: white;
-      }
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
+
+    h1 {
+      font-size: 2.5rem;
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 0.5rem;
     }
-    p {
-      margin: 1em 0;
+
+    h2 {
+      font-size: 2rem;
     }
+
     a {
-      color: #1a1a1a;
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.3s ease;
     }
-    a:visited {
-      color: #1a1a1a;
+
+    a:hover {
+      color: var(--secondary-color);
+      text-decoration: underline;
     }
+
+    code {
+      background-color: #f0f0f0;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    pre {
+      background-color: #f0f0f0;
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    ul, ol {
+      padding-left: 2rem;
+    }
+
     img {
       max-width: 100%;
-    }
-    svg {
       height: auto;
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-      font-size: 85%;
-      margin: 0;
-      hyphens: manual;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      background-color: #1a1a1a;
-      border: none;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
       display: block;
-      font-variant-numeric: lining-nums tabular-nums;
+      margin: 1rem auto;
     }
-    table caption {
-      margin-bottom: 0.75em;
+
+    blockquote {
+      border-left: 4px solid var(--primary-color);
+      padding-left: 1rem;
+      margin-left: 0;
+      font-style: italic;
+      color: #555;
     }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
     }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      text-align: left;
+    }
+
     th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
+      background-color: var(--primary-color);
+      color: white;
     }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
     }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC ul {
-      padding-left: 1.3em;
-    }
-    #TOC > ul {
-      padding-left: 0;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
@@ -196,106 +149,106 @@ fichiers</a></li>
 </nav>
 <h2 data-number="1" id="installation"><span
 class="header-section-number">1</span> Installation</h2>
-<p>On aborde très rapidement l’installation d’Omeka S. C’est une
-application qui s’installe sur un serveur. Cela nécessite donc d’avoir
-accès à un serveur (personnel, institutionnel) et d’avoir des
-compétences informatiques. Si c’est le cas, vous pouvez vous référer à
-la documentation d’Omeka S pour l’installation : <a
+<p>On aborde très rapidement l'installation d'Omeka S. C'est une
+application qui s'installe sur un serveur. Cela nécessite donc d'avoir
+accès à un serveur (personnel, institutionnel) et d'avoir des
+compétences informatiques. Si c'est le cas, vous pouvez vous référer à
+la documentation d'Omeka S pour l'installation : <a
 href="https://omeka.org/s/docs/user-manual/install/">en anglais</a>, <a
 href="https://omeka-s-enduser-fr.readthedocs.io/fr/latest/docs/install.html">en
-version française</a> (partielle). Ce n’est pas une opération simple.
+version française</a> (partielle). Ce n'est pas une opération simple.
 Pour faciliter les choses, plusieurs solutions :</p>
-<p>·        Vous pouvez vous orienter vers l’auto hébergement (sur un
+<p>·        Vous pouvez vous orienter vers l'auto hébergement (sur un
 serveur NAS, un ordinateur portable qui traîne, un Raspberry Pi, etc.)
-avec des installateurs d’applications qui automatiseront l’installation
-d’Omeka S : <a href="https://www.cloudron.io/index.html">Cloudron</a>,
+avec des installateurs d'applications qui automatiseront l'installation
+d'Omeka S : <a href="https://www.cloudron.io/index.html">Cloudron</a>,
 <a href="https://yunohost.org/#/">YunoHost</a> ;</p>
-<p>·        Vous pouvez payer un hébergeur qui se chargera de faire
-automatiquement l’hébergement et l’installation d’Omeka S sur un serveur
+<p>·        Vous pouvez payer un hébergeur qui se chargera de faire
+automatiquement l'hébergement et l'installation d'Omeka S sur un serveur
 dédié. Je recommande par exemple <a
 href="https://www.reclaimhosting.com/shared-hosting/"><em>Reclaim
 Hosting</em></a> qui propose une offre intéressante pour les étudiants
 et chercheurs, même si cela pose problème concernant la souveraineté des
-données. En France, l’entreprise FranceServ Hébergement peut également
-héberger et permettre d’installer facilement <a
+données. En France, l'entreprise FranceServ Hébergement peut également
+héberger et permettre d'installer facilement <a
 href="https://www.franceserv.fr/site-en-1-clic/omekas">une instance
 Omeka S</a> ;</p>
-<p>·        Si votre usage d’Omeka S se fait dans le cadre d’un projet
+<p>·        Si votre usage d'Omeka S se fait dans le cadre d'un projet
 de recherche, vous pouvez solliciter gratuitement la <a
 href="https://www.huma-num.fr/les-services-par-etapes/">TGIR Huma
-Num</a> qui peut héberger et vous ouvrir l’accès à une base Omeka S.</p>
+Num</a> qui peut héberger et vous ouvrir l'accès à une base Omeka S.</p>
 <h2 data-number="2"
 id="fonctionnalités-le-backoffice-les-vocabulaires"><span
 class="header-section-number">2</span> Fonctionnalités : le backoffice /
 les vocabulaires</h2>
 <p>Omeka S présente une interface classique de CMS de type WordPress. Le
-but étant que l’outil puisse être facile à prendre en main. On
-distingue :</p>
-<p>·        <strong>Les contenus</strong> : Ils constituent le cœur
-d’Omeka S. C’est dans « Contenus » que vous allez importer vos items.
-Mais Omeka S ne fonctionne pas comme un outil « réceptacle » qui
+but étant que l'outil puisse être facile à prendre en main. On
+distingue :</p>
+<p>·        <strong>Les contenus</strong> : Ils constituent le cœur
+d'Omeka S. C'est dans « Contenus » que vous allez importer vos items.
+Mais Omeka S ne fonctionne pas comme un outil « réceptacle » qui
 accueillerait uniquement des imports, il vous donne directement la
 possibilité également de créer vous-même vos contenus. Un contenu dans
 Omeka S, il se caractérise par un champ titre, une classe, un
 propriétaire, une date de création. Et vous pouvez trier classiquement
 vos contenus de plusieurs manières. Il y a en effet un système de
-filtres : titre, identifiant, classe, propriétaire, date de création.
+filtres : titre, identifiant, classe, propriétaire, date de création.
 Vous avez également un système de recherche avancée toujours utile quand
 votre base comporte des milliers de contenus. Vous pouvez évidemment
-interagir avec chaque contenu. Vous pouvez l’éditer (crayon), le
-supprimer (poubelle), visualiser les détails (les « … »). En cliquant
+interagir avec chaque contenu. Vous pouvez l'éditer (crayon), le
+supprimer (poubelle), visualiser les détails (les « … »). En cliquant
 sur le crayon ou sur le titre du contenu, vous atterrissez directement
 sur la notice en question. Omeka S vous permet également de gérer le
 traitement par lot de vos notices. Si vous sélectionnez plusieurs
-notices, le bouton « Traiter » du traitement par lot est visible et vous
+notices, le bouton « Traiter » du traitement par lot est visible et vous
 permettra de modifier par exemple à la volée une métadonnée bien précise
-pour un lot de notices ;</p>
-<p>·        <strong>Les médias</strong> : Une sous-branche en quelque
+pour un lot de notices ;</p>
+<p>·        <strong>Les médias</strong> : Une sous-branche en quelque
 sorte de vos contenus. Omeka S fait donc une distinction entre les
-contenus et les médias. Un média, par exemple, c’est une aﬀiche que vous
+contenus et les médias. Un média, par exemple, c'est une aﬀiche que vous
 allez importer dans Omeka S. Et cette aﬀiche pourra être une vignette de
 votre contenu qui est une notice renseignée par des métadonnées
 précises. Le média peut être également du son, de la vidéo. En dehors de
 cela, les médias, comme les contenus, sont triables par les filtres,
 interrogeables par le moteur de recherche avancée, et sont traitables
-par lot ;</p>
-<p>·        <strong>Les collections</strong> : elles rassemblent les
+par lot ;</p>
+<p>·        <strong>Les collections</strong> : elles rassemblent les
 contenus. Si vous importez, si vous générez, les données de vos contenus
 vont devoir obligatoirement se trouver dans une collection. Un contenu
-se crée, ou s’importe, et il est agrégé dans une collection. Votre
+se crée, ou s'importe, et il est agrégé dans une collection. Votre
 collection se crée et, comme les contenus, elle est caractérisée par des
 métadonnées, par une classe, par un propriétaire et par une date de
 création. Par la suite la collection sera mobilisée durant la
 construction de votre site, de votre catalogue, et vous allez pouvoir
 faire ressortir vos notices de cette manière. Si vous cliquez sur les
-détails (les « … ») de votre collection, vous avez la possibilité de
+détails (les « … ») de votre collection, vous avez la possibilité de
 voir le nombre précis des contenus qui sont agrégés. Vous pouvez
 également vous assurer de la visibilité de votre collection. On peut
 également envisager de travailler notre collection, seul ou en groupe,
-mais d’assurer une certaine confidentialité. Omeka S vous permet de
-contrôler ce point. Il y a la visibilité, et l’ouverture ou la fermeture
-aux ajouts ; [**TP : Créez une collection « A » pour votre site]**</p>
-<p>·        <strong>Les vocabulaires</strong> : Ils vont vous permettre
+mais d'assurer une certaine confidentialité. Omeka S vous permet de
+contrôler ce point. Il y a la visibilité, et l'ouverture ou la fermeture
+aux ajouts ; [**TP : Créez une collection « A » pour votre site]**</p>
+<p>·        <strong>Les vocabulaires</strong> : Ils vont vous permettre
 de décrire finement vos contenus, donc vos notices dans notre cas. On
 retrouve par exemple le vocabulaire <em>Dublin Core</em> qui est
 certainement le standard le plus utilisé pour la description de contenus
 sur le web sur les plateformes qui relèvent des SHS. Vous avez la
-possibilité également d’importer des vocabulaires qui pourront s’adapter
+possibilité également d'importer des vocabulaires qui pourront s'adapter
 précisément aux standards de vos disciplines. De base, nous avons
-plusieurs vocabulaires qui vont nous permettre de travailler :
+plusieurs vocabulaires qui vont nous permettre de travailler :
 <em>Bibliographic Ontology</em>, <em>Dublin Core</em>, <em>Dublin Core
 Type</em>, <em>Friend of a Friend</em>. Le vocabulaire se caractérise
 par un libellé (son nom), un préfixe, des classes, des propriétés.
 Retenez que votre vocabulaire sera mobilisé pour décrire précisément vos
-contenus. C’est de fait un ensemble de champs sur lesquels vous pouvez
+contenus. C'est de fait un ensemble de champs sur lesquels vous pouvez
 avoir le contrôle. Les vocabulaires répondent à des normes que vous
 pouvez adapter en fonction de la nature de votre projet sous Omeka S. Le
 plus souvent, les vocabulaires qui sont présentés ici suﬀisent.
 Notamment le <em>Dublin Core</em> qui est malléable. Si vous cliquez sur
-les propriétés d’un vocabulaire, vous observez qu’il y a toujours un
-libellé et un vocable. Le vocable, c’est ce qui importe pour la machine.
-Le libellé, c’est ce qui est aﬀiché concrètement sur vos notices, pour
-les utilisateurs. En sélectionnant les détails d’un libellé, Omeka S
+les propriétés d'un vocabulaire, vous observez qu'il y a toujours un
+libellé et un vocable. Le vocable, c'est ce qui importe pour la machine.
+Le libellé, c'est ce qui est aﬀiché concrètement sur vos notices, pour
+les utilisateurs. En sélectionnant les détails d'un libellé, Omeka S
 vous permet de dénombrer les contenus qui sont concernés précisément par
 le champ. Pour importer des vocabulaires, il y a des sites qui existent.
 Vous pouvez aller par exemple sur le site <a
@@ -303,25 +256,25 @@ href="https://lov.linkeddata.es/dataset/lov">LOV pour <em>Linked Open
 Vocabularies</em></a>. On sélectionne un vocabulaire (<a
 href="https://lov.linkeddata.es/dataset/lov/vocabs/cl"><em>Cinelab
 ontology</em></a>), en fonction de sa description, de son thème, de sa
-langue. Dans Omeka S, on clique sur « Importer un nouveau vocabulaire ».
+langue. Dans Omeka S, on clique sur « Importer un nouveau vocabulaire ».
 Vous renseignez, en vous aidant de la fiche sur LOV, le titre du
-vocabulaire, l’URI, le préfixe de l’espace de nom et l’URL vers le
-vocabulaire (souvent le même que l’URI). Et Omeka se charge ensuite
-d’importer les différents champs du vocabulaire que vous pouvez ensuite
-mobiliser pour décrire vos contenus, vos collections et vos médias ;
+vocabulaire, l'URI, le préfixe de l'espace de nom et l'URL vers le
+vocabulaire (souvent le même que l'URI). Et Omeka se charge ensuite
+d'importer les différents champs du vocabulaire que vous pouvez ensuite
+mobiliser pour décrire vos contenus, vos collections et vos médias ;
 <strong>[TP Importez un vocabulaire depuis LOV]</strong></p>
-<p>·        <strong>Les modèles de ressource</strong> : c’est en quelque
+<p>·        <strong>Les modèles de ressource</strong> : c'est en quelque
 sorte un système de gabarit pour vos contenus, donc vos notices, qui est
 de fait directement lié également aux vocabulaires que vous utilisez.
 Les modèles de ressource ont un intérêt quand vous ne passez pas par
-l’import, et que vous privilégiez la création de contenus directement
+l'import, et que vous privilégiez la création de contenus directement
 dans Omeka S. Par exemple, vous créez directement dans Omeka des notices
 qui concernent des enregistrements audio pour un fonds en particulier.
 Vous allez créer un gabarit, un modèle de ressources, avec des
 métadonnées précises qui concernent les enregistrements audio. Dans ce
 gabarit, vous allez enregistrer les métadonnées qui concernent ce type
 de ressource. Vous gagnez ensuite du temps au moment de la saisie.
-Enfin, on retient que créer un modèle de ressource, c’est lui donner un
+Enfin, on retient que créer un modèle de ressource, c'est lui donner un
 libellé, une classe (type), et lui attribuer les métadonnées qui vous
 intéressent et que vous récupérez dans les différents
 vocabulaires/ontologies.</p>
